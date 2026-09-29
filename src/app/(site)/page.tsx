@@ -4,6 +4,7 @@ import { LogoMark } from "@/components/site/Logo";
 import { ProductShot } from "@/components/site/ProductShot";
 import { icons } from "@/components/site/IntegrationIcons";
 import { HeroCards, CaptureCarousel, TeamsTabs, RoleCarousel } from "@/components/site/HomeInteractive";
+import { Reveal, SplitHeading, Scramble, Parallax, ScaleIn, CountUp } from "@/components/site/Fx";
 
 const companies = ["HubSpot", "Adobe", "Zapier", "Grubhub", "Webflow", "Calendly", "Notion", "Ramp", "Vercel", "Loom"];
 
@@ -12,20 +13,20 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="container-x grid items-center gap-12 pb-20 pt-16 lg:grid-cols-[1.05fr_1fr] lg:pb-28 lg:pt-24">
+        <div className="container-x grid items-center gap-12 pb-20 pt-16 lg:grid-cols-[1.3fr_1fr] lg:pb-28 lg:pt-24">
           <div>
-            <h1 className="h1 max-w-[17ch]">AI notetaking that is out of this world</h1>
-            <p className="p-regular mt-6 max-w-md text-offwhite/75">
+            <SplitHeading as="h1" text="AI notetaking that is out of this world" className="h1 !text-[clamp(3rem,4.7vw,4.3rem)] max-w-[16ch]" />
+            <Reveal delay={420}><p className="p-regular mt-2 max-w-md text-offwhite/75">
               Fanthom summarizes your meetings so you can focus on the conversation.{" "}
               <span className="font-medium text-offwhite">Now available bot-free.</span>
-            </p>
-            <Link href="/login" className="btn btn-cyan mt-8">Get started – free forever</Link>
-            <div className="p-small mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-offwhite/50">
+            </p></Reveal>
+            <Reveal delay={560}><Link href="/login" className="btn btn-cyan mt-8"><Scramble text="Get started – free forever" /></Link></Reveal>
+            <Reveal delay={700}><div className="p-small mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-offwhite/50">
               <span>SOC 2 Type II</span><span aria-hidden>|</span>
               <span>GDPR</span><span aria-hidden>|</span>
               <span>HIPAA Compliant</span><span aria-hidden>|</span>
               <span>SSO / SCIM</span>
-            </div>
+            </div></Reveal>
           </div>
           <HeroCards />
         </div>
@@ -60,11 +61,11 @@ export default function Home() {
 
       {/* TEAM OF 1 OR 1000 */}
       <section className="relative overflow-hidden py-24">
-        <Planet size={430} className="absolute -left-52 top-40 opacity-90" />
+        <Parallax speed={0.18} className="absolute -left-52 top-40">
+          <Planet size={430} className="opacity-90" />
+        </Parallax>
         <div className="container-x relative">
-          <h2 className="h2 mx-auto max-w-[24ch] text-center">
-            Whether you&rsquo;re a team of 1 or 1,000, Fanthom&rsquo;s got your back
-          </h2>
+          <SplitHeading text="Whether you’re a team of 1 or 1,000, Fanthom’s got your back" className="h2 mx-auto max-w-[24ch] text-center" />
           <TeamsTabs />
         </div>
       </section>
@@ -76,12 +77,12 @@ export default function Home() {
             ["Clarity", "Unforgettable meetings… quite literally", "Shockingly accurate transcripts, instant summaries, and action items with consistent quality across every call – delivered straight to your inbox, like magic.", "#00beff"],
             ["Momentum", "From talk to done", "Every commitment becomes an owned, dated action item the moment the call ends – no Monday archaeology required.", "#ffa8bb"],
             ["Ease", "Zero-click capture", "Joins from your calendar, or records bot-free with nothing visible in the room. You never think about it again.", "#fff58c"],
-          ].map(([t, h, body, c]) => (
-            <div key={t as string} className="rounded-3xl border border-white/10 bg-[#0b0b0c] p-8">
+          ].map(([t, h, body, c], ci) => (
+            <Reveal key={t as string} delay={ci * 130} className="rounded-3xl border border-white/10 bg-[#0b0b0c] p-8">
               <h3 className="h3 !text-[1.6rem]" style={{ color: c as string }}>{t}</h3>
               <div className="h4 mt-3 !text-[1.15rem] !font-medium">{h}</div>
               <p className="p-small mt-3 text-offwhite/65">{body}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -89,17 +90,17 @@ export default function Home() {
       {/* STATS */}
       <section className="py-16">
         <div className="container-x text-center">
-          <h2 className="h2">Fanthom teams<br />work smarter</h2>
+          <SplitHeading text="Fanthom teams work smarter" className="h2 mx-auto max-w-[12ch]" />
           <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-3">
             {[
               ["95% of users", "say Fanthom helps them stay fully present in meetings"],
               ["6+ hours saved", "per team member every week on follow-up work"],
               ["3X faster", "from meeting insights to actionable next steps"],
             ].map(([n, d]) => (
-              <div key={n}>
-                <div className="disp text-4xl text-brand-cyan">{n}</div>
+              <Reveal key={n} delay={120}>
+                <CountUp value={n} className="disp text-4xl text-brand-cyan" />
                 <p className="p-small mt-2 text-offwhite/65">{d}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -108,9 +109,9 @@ export default function Home() {
       {/* MAKE YOUR TEAM UNSTOPPABLE */}
       <section className="py-24">
         <div className="container-x text-center">
-          <div className="kicker text-brand-cyan">Shared understanding. Faster execution. Better results.</div>
-          <h2 className="h2 mt-3">Make your team unstoppable</h2>
-          <div className="mt-12"><ProductShot /></div>
+          <div className="kicker text-brand-cyan"><Scramble text="Shared understanding. Faster execution. Better results." /></div>
+          <SplitHeading text="Make your team unstoppable" className="h2 mt-3" />
+          <ScaleIn className="mt-12"><ProductShot /></ScaleIn>
           <Link href="/login" className="btn btn-cyan mt-12">Try Fanthom for your team</Link>
         </div>
       </section>
@@ -118,8 +119,8 @@ export default function Home() {
       {/* WORKS WHERE YOU MEET */}
       <section className="py-24">
         <div className="container-x text-center">
-          <div className="kicker text-brand-yellow">Zero friction, maximum flexibility.</div>
-          <h2 className="h2 mt-3">Works where you meet</h2>
+          <div className="kicker text-brand-yellow"><Scramble text="Zero friction, maximum flexibility." /></div>
+          <SplitHeading text="Works where you meet" className="h2 mt-3" />
           <div className="grid-bg relative mx-auto mt-14 h-[440px] max-w-4xl">
             <svg className="absolute inset-0 h-full w-full" viewBox="0 0 900 440" fill="none" aria-hidden>
               {[[218, 105], [672, 84], [148, 235], [700, 208], [258, 356], [648, 352]].map(([x, y], i) => (
@@ -143,17 +144,17 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="p-large mx-auto mt-10 max-w-[28ch] text-offwhite/90">
+          <Reveal><p className="p-large mx-auto mt-10 max-w-[28ch] text-offwhite/90">
             Fanthom adapts to your workflow, not the other way around.
-          </p>
+          </p></Reveal>
         </div>
       </section>
 
       {/* EVERY TEAM IN FLOW */}
       <section className="py-24">
         <div className="container-x text-center">
-          <div className="kicker text-brand-yellow">Empower your team&rsquo;s best work with seriously accurate AI notetaking</div>
-          <h2 className="h2 mt-3">Every team in flow</h2>
+          <div className="kicker text-brand-yellow"><Scramble text="Empower your team’s best work with seriously accurate AI notetaking" /></div>
+          <SplitHeading text="Every team in flow" className="h2 mt-3" />
           <Link href="/login" className="btn btn-cyan mt-8">Get started. It&rsquo;s free.</Link>
         </div>
         <RoleCarousel />
@@ -162,8 +163,8 @@ export default function Home() {
       {/* BOTTOM CTA */}
       <section className="arc-band py-28 text-center text-black">
         <div className="container-x">
-          <div className="kicker font-medium">Never miss what matters</div>
-          <h2 className="h2 mx-auto mt-3 max-w-[18ch]">Stop guessing. Ask Fanthom. Start today, for free.</h2>
+          <div className="kicker font-medium"><Scramble text="Never miss what matters" /></div>
+          <SplitHeading text="Stop guessing. Ask Fanthom. Start today, for free." className="h2 mx-auto mt-3 max-w-[18ch]" />
           <Link href="/login" className="btn btn-black mt-9">Get started. It&rsquo;s free.</Link>
         </div>
       </section>

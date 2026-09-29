@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export function HeroCards() {
   return (
     <div className="relative hidden h-[420px] lg:block" aria-hidden>
-      <div className="animate-floaty absolute right-6 top-2 w-64 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl">
+      <div className="fx-pop animate-floaty absolute right-6 top-2 w-64 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "0s, .15s" }}>
         <div className="mb-2 flex items-center gap-2 text-[0.75rem] font-medium text-brand-cyan">✦ Ask Fanthom</div>
         <div className="rounded-xl bg-white/5 p-3 text-[0.72rem] text-offwhite/75">
           What did we commit to on the Brightloop call?
@@ -15,7 +15,7 @@ export function HeroCards() {
           You committed to sending the redlined DPA by Wednesday and the annual order form today.
         </div>
       </div>
-      <div className="animate-floaty absolute left-4 top-40 w-60 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl [animation-delay:1.4s]">
+      <div className="fx-pop animate-floaty absolute left-4 top-40 w-60 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "1.4s, .4s" }}>
         <div className="mb-2 text-[0.75rem] font-medium text-offwhite">Project check-in</div>
         <div className="mb-2 flex -space-x-2">
           {["#00beff", "#ffa8bb", "#fff58c", "#9600ff"].map((c) => (
@@ -27,7 +27,7 @@ export function HeroCards() {
           <span className="rounded-full bg-white/10 px-2.5 py-1">Action items</span>
         </div>
       </div>
-      <div className="animate-floaty absolute bottom-2 right-16 h-40 w-40 [animation-delay:0.7s]">
+      <div className="fx-pop animate-floaty absolute bottom-2 right-16 h-40 w-40" style={{ animationDelay: "0.7s, .65s" }}>
         <svg viewBox="0 0 100 100" className="h-full w-full">
           <defs>
             <radialGradient id="hero-p" cx="35%" cy="30%" r="80%">
@@ -107,7 +107,7 @@ export function CaptureCarousel() {
     <div>
       <div className="grid gap-6 md:grid-cols-2">
         {[i, (i + 1) % slides.length].map((idx, col) => (
-          <div key={col} className="overflow-hidden rounded-2xl border border-white/15 bg-black/40 backdrop-blur">
+          <div key={`${col}-${idx}`} className="fx-slide overflow-hidden rounded-2xl border border-white/15 bg-black/40 backdrop-blur">
             <p className="p-medium px-6 pt-6 text-offwhite">{slides[idx].title}</p>
             <div className="mt-4 h-56"><SlideArt kind={slides[idx].art} /></div>
           </div>
