@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fanthom — a working rebuild of fathom.video / fathom.ai
 
-## Getting Started
+24-hour assignment build. Live at **https://fanthom-clone-ecru.vercel.app** · repo public, `.agent-logs/` committed.
 
-First, run the development server:
+## What this is
+
+Two surfaces, one Next.js 16 app:
+
+- **Marketing site** (`/`, `/pricing`) — rebuild of fathom.ai's homepage and pricing pages: hero, capture carousel, teams/individuals tabs, integrations map, role carousel, stats, full feature matrix with plan toggles (individuals/teams, monthly/annual).
+- **The product** (`/app`) — the part that actually matters:
+  - **Meeting library** grouped by day, with external/internal filters and inline filtering.
+  - **Call page** — synthetic playback (speaker tiles light up per transcript segment, scrubbable waveform, keyboard shortcuts), transcript synced to the clock with click-to-seek and per-call search, AI summary with **template switching** (Chronological / BANT / actions-only), **action items** that link to the second they were said and persist toggles, **highlights**, and **Ask Fanthom** with citations that jump playback.
+  - **Global search** across every transcript with moment-level deep links.
+  - **Share links** that open for signed-out visitors, and **clip links** that scope playback to a range — stateless tokens, shareable with someone who was never on the call.
+  - **Team workspace** — recordings + open action items across the team.
+  - **Simulated bot-free capture** flow (`/app/live`).
+
+## Scope calls (the honest part)
+
+- **The recording bot is faked.** The brief explicitly allows it. Playback is a synthetic renderer driven by transcript timing at 8× so an hour-long call demos in minutes. Time went into the post-call experience instead, because that is where Fathom lives or dies.
+- **Ask Fanthom has no LLM behind it.** It keyword-scores transcript segments and answers with citations. The UI contract (answer + jump-to-moment) is the real one; the model behind it is swappable. The panel says so in the footer.
+- **Auth is a demo cookie.** Any email enters a seeded workspace. OAuth wiring is table stakes and tells you nothing about the product.
+- **Seed data is the deliverable.** Six meetings, including the case the brief says matters: a **67-minute, 9-person QBR** with regional deep-dives, a security Q&A, and commercial negotiation — action items, highlights, and per-template summaries all authored against it.
+- Mutations (action-item toggles, custom highlights) persist in `localStorage`; the deploy is fully stateless, so share links survive any instance.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+node seed/generate.mjs   # regenerate src/data/meetings.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Agent capture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`.claude/settings.json` wires Claude Code's `UserPromptSubmit` and `Stop` hooks to `.claude/hooks/capture.py`, which appends prompt/response pairs per session to `.agent-logs/`. See `CAPTURE-TEST.md` for the canary proof and what failed first.
