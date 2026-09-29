@@ -61,3 +61,36 @@ Desktop-only: Lenis (#global-1), planet scrub (#6), stars drift+parallax (#4 mot
 hover grid (#9), pinned stats (#14). Always-on: typewriter (#1), scramble (#2),
 astronaut bob (#3), static star paint (#4), card reveals (#7), bubbles (#8), marquee (#10).
 Slick breakpoints: 990 and 660.
+
+## Phase 3 verification (2026-09-29, headless Chromium against the localhost build)
+
+Method per item: runtime assertions (computed opacity/transform sampling, canvas
+presence, CSS variable readback) plus full-page screenshot diffing at 1440/768/390.
+Zero console errors at all three widths.
+
+| # | Item | Status | Evidence / notes |
+|---|---|---|---|
+| G1 | Lenis smooth scroll ≥992px | **matched** | `window.lenis` present at 1440, reverted below 992 via matchMedia |
+| G2 | Nav swap at 80px | **matched** | `data-btn-swap` reads `top` → `scrolled` past the threshold |
+| 1 | Hero typewriter | **matched** | 32 char spans; last char opacity 0→1 after delay+stagger; 0.2s / 0.04 / power1.out; later headings at top 80% once |
+| 2 | Scramble kickers | **matched** | per-word 1s, stagger 15ms, uppercase charset, asserted to settle to exact text |
+| 3 | Astronaut bob | **matched** | y −14px, 3s sine.inOut yoyo, applied to our original space-figure art |
+| 4 | Starfields | **matched** | canvases across hero/carousel/plans/flow; static paint everywhere; 20s drift + pointer parallax depth (i+1)×6 desktop only |
+| 5 | Gradient parallax | **matched** | y → +90vh, scrub 1, `top bottom → bottom top` |
+| 6 | Planet scrub | **matched (equivalent)** | reference scrubs a video's currentTime (scrub 2, ≥992px); ours scrubs rotation of an original SVG planet on the identical trigger — their video asset is not shipped |
+| 7 | Card reveals | **matched** | yPercent 20→0, 0.6s power2.out, batch stagger 0.4 |
+| 8 | Integration bubbles | **matched** | shuffled stagger asserted mid-flight (one pill at 0.58 while others 0), 0.6s pop + 0.5s line, stagger 0.18, top 70% once |
+| 9 | Hover grid | **matched** | 80px cells, brand-gradient strokes, fade 1/frame, desktop-only canvas; idles on home since the offwhite band is mobile-only, as on the reference |
+| 10 | Marquee banner | **matched** | duration = distance / 80px·s⁻¹ (computed ≈31.3s), linear loop, cloned track, reduced-motion pause |
+| 11 | Capture carousel | **partial** | React carousel with slide-in, dots and arrows; Swiper's drag physics not replicated |
+| 12 | Role cards slider | **partial** | center carousel, 300ms slide, audited arrow hover scale .9; slick infinite drag not replicated |
+| 13 | Sticky title sequence | **n/a on home** | zero instances on the live homepage per audit |
+| 14 | Pinned stats | **n/a on home** | live homepage shows stats only in the mobile variant (desktop section collapsed); clone mirrors it with circle + gradient-trail styling, mobile-only |
+| 15–19 | Hover transitions | **matched** | nav 0.3s cubic-bezier(.25,.46,.45,.94) → cyan, footer 0.35s, buttons all .2s, arrows scale .9 |
+| 20 | Integration card hover | **n/a** | integrations listing page out of scope |
+| 21 | spin keyframe | **n/a** | utility, unused on audited pages |
+
+Known remaining differences: substitute display font (Oswald in place of the commercial
+TT Rounds Neue Cond), original artwork in place of proprietary illustrations/video,
+carousel drag physics (#11, #12), and a longer mobile page (equivalent stack, spacing
+not yet tuned per-section below 768).

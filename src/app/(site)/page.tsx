@@ -5,7 +5,7 @@ import { ProductShot } from "@/components/site/ProductShot";
 import { icons } from "@/components/site/IntegrationIcons";
 import { HeroCards, CaptureCarousel, TeamsTabs, RoleCarousel } from "@/components/site/HomeInteractive";
 import { Reveal, SplitHeading, Scramble, Parallax, ScaleIn, CountUp } from "@/components/site/Fx";
-import { Stars, GridHover, MarqueeBanner } from "@/components/site/Canvases";
+import { Stars, MarqueeBanner } from "@/components/site/Canvases";
 import { GradientParallax, Bob } from "@/components/site/Fx";
 import { SpaceFigure, MiniShip } from "@/components/site/HeroArt";
 import { BubbleField } from "@/components/site/Bubbles";
@@ -105,20 +105,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS — offwhite grid-section with interactive hover grid (inventory #9) */}
-      <section className="relative bg-offwhite py-24 text-black">
-        <GridHover />
-        <div className="container-x relative text-center">
+      {/* STATS — offwhite band; on the reference this variant renders on mobile
+          only (desktop section is collapsed), stat circles with gradient trails */}
+      <section className="relative bg-offwhite py-16 text-black lg:hidden">
+        <div className="text-center">
           <SplitHeading text="Fanthom teams work smarter" className="h2 mx-auto max-w-[12ch] !text-black" />
-          <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-3">
+          <div className="mt-10 space-y-10">
             {[
-              ["95% of users", "say Fanthom helps them stay fully present in meetings"],
-              ["6+ hours saved", "per team member every week on follow-up work"],
-              ["3X faster", "from meeting insights to actionable next steps"],
-            ].map(([n, d]) => (
-              <Reveal key={n} delay={120}>
-                <CountUp value={n} className="disp text-5xl text-black" />
-                <p className="p-small mt-2 text-black/65">{d}</p>
+              ["95% of users", "say Fanthom helps them stay fully present in meetings", "#f55200", "left"],
+              ["6+ hours saved", "per team member every week on follow-up work", "#ffa8bb", "right"],
+              ["3X Faster", "from meeting insights to actionable next steps", "#00beff", "left"],
+            ].map(([n, d, c, side]) => (
+              <Reveal key={n} className="relative">
+                <div
+                  className="absolute inset-y-4 w-3/5 opacity-50"
+                  style={{ [side === "left" ? "left" : "right"]: 0, background: `linear-gradient(${side === "left" ? "90deg" : "270deg"}, ${c}55, transparent)` }}
+                  aria-hidden
+                />
+                <div
+                  className="relative mx-auto flex h-52 w-52 flex-col items-center justify-center rounded-full px-6 text-center"
+                  style={{ background: c as string }}
+                >
+                  <div className="text-[1.35rem] font-medium leading-tight">{n}</div>
+                  <p className="mt-1.5 text-[0.85rem] leading-snug">{d}</p>
+                </div>
               </Reveal>
             ))}
           </div>
