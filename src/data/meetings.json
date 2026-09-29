@@ -1,0 +1,1522 @@
+{
+ "me": {
+  "id": "u-sahil",
+  "name": "Sahil Ijaz",
+  "email": "demo@fathomclone.app",
+  "color": "#00beff",
+  "initials": "SI",
+  "role": "Account Executive",
+  "team": "Sales"
+ },
+ "people": {
+  "sahil": {
+   "id": "u-sahil",
+   "name": "Sahil Ijaz",
+   "email": "demo@fathomclone.app",
+   "color": "#00beff",
+   "initials": "SI",
+   "role": "Account Executive",
+   "team": "Sales"
+  },
+  "mira": {
+   "id": "u-mira",
+   "name": "Mira Chen",
+   "email": "mira@brightloop.io",
+   "color": "#9600ff",
+   "initials": "MC",
+   "role": "VP Operations",
+   "company": "Brightloop"
+  },
+  "dan": {
+   "id": "u-dan",
+   "name": "Daniel Okafor",
+   "email": "daniel@brightloop.io",
+   "color": "#f55200",
+   "initials": "DO",
+   "role": "Head of RevOps",
+   "company": "Brightloop"
+  },
+  "lena": {
+   "id": "u-lena",
+   "name": "Lena Vogel",
+   "email": "lena@fathomclone.app",
+   "color": "#ffa8bb",
+   "initials": "LV",
+   "role": "Customer Success Lead",
+   "team": "CS"
+  },
+  "tom": {
+   "id": "u-tom",
+   "name": "Tom Reyes",
+   "email": "tom@fathomclone.app",
+   "color": "#0ea472",
+   "initials": "TR",
+   "role": "Solutions Engineer",
+   "team": "Sales"
+  },
+  "priya": {
+   "id": "u-priya",
+   "name": "Priya Nair",
+   "email": "priya@northwindhealth.com",
+   "color": "#c026d3",
+   "initials": "PN",
+   "role": "Director of IT",
+   "company": "Northwind Health"
+  },
+  "jonas": {
+   "id": "u-jonas",
+   "name": "Jonas Berg",
+   "email": "jonas@northwindhealth.com",
+   "color": "#2563eb",
+   "initials": "JB",
+   "role": "Compliance Officer",
+   "company": "Northwind Health"
+  },
+  "amara": {
+   "id": "u-amara",
+   "name": "Amara Diallo",
+   "email": "amara@fathomclone.app",
+   "color": "#d97706",
+   "initials": "AD",
+   "role": "Product Manager",
+   "team": "Product"
+  },
+  "kenji": {
+   "id": "u-kenji",
+   "name": "Kenji Watanabe",
+   "email": "kenji@fathomclone.app",
+   "color": "#dc2626",
+   "initials": "KW",
+   "role": "Engineering Lead",
+   "team": "Engineering"
+  },
+  "sofia": {
+   "id": "u-sofia",
+   "name": "Sofia Marino",
+   "email": "sofia@fathomclone.app",
+   "color": "#059669",
+   "initials": "SM",
+   "role": "Designer",
+   "team": "Product"
+  },
+  "raj": {
+   "id": "u-raj",
+   "name": "Raj Patel",
+   "email": "raj@velocitycargo.com",
+   "color": "#7c3aed",
+   "initials": "RP",
+   "role": "COO",
+   "company": "Velocity Cargo"
+  },
+  "emma": {
+   "id": "u-emma",
+   "name": "Emma Lindqvist",
+   "email": "emma@velocitycargo.com",
+   "color": "#db2777",
+   "initials": "EL",
+   "role": "Sales Director",
+   "company": "Velocity Cargo"
+  }
+ },
+ "meetings": [
+  {
+   "id": "m-qbr-brightloop",
+   "title": "Brightloop × Northwind rollout QBR",
+   "kind": "External · QBR",
+   "platform": "zoom",
+   "start": "2026-09-28T15:00:00.000Z",
+   "durationSec": 4061,
+   "attendees": [
+    "u-sahil",
+    "u-mira",
+    "u-dan",
+    "u-lena",
+    "u-priya",
+    "u-tom",
+    "u-raj",
+    "u-emma",
+    "u-jonas"
+   ],
+   "host": "u-sahil",
+   "external": true,
+   "account": "Brightloop",
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Adoption review",
+       "Pilot ran 6 weeks across 42 seats: 90% weekly active recorders, 11 meetings captured per user per week, and summary edits before sharing fell from ~40% to 9%. Lisbon plateaued at 60% due to mixed-language transcript quality; a code-switched speech beta will be enabled for both workspaces."
+      ],
+      [
+       "Regional feedback",
+       "Managers in all three regions want weekly digests grouped by account instead of by rep. Lena will configure account-grouped digest views this week; the change applies retroactively."
+      ],
+      [
+       "CRM field sync",
+       "Daniel requires field-level sync with explicit rep confirmation and no silent writes. Business tier supports mapped fields (stage, close date, amount, next step, custom text/date fields) with a full audit log. Security review doc to follow."
+      ],
+      [
+       "Compliance",
+       "Jonas needs an updated DPA reflecting the current sub-processor list before any CRM writes. A redline will be sent by Wednesday; his review turnaround for a redline is one week."
+      ],
+      [
+       "Commercials",
+       "Full rollout is 210 seats phased over two quarters. Pilot pricing holds on all 210 seats only with an annual signature this month: ~$72k/yr annual vs ~$96k at list monthly. Order form to be sent today."
+      ]
+     ]
+    },
+    "bant": {
+     "label": "Sales · BANT",
+     "blocks": [
+      [
+       "Budget",
+       "Annual at pilot rate ≈ $72,000 vs $96,000+ list monthly. Mira called the delta \"a strong argument\" and asked for the order form."
+      ],
+      [
+       "Authority",
+       "Mira (VP Ops) owns the decision, procurement runs in parallel. Daniel (RevOps) and Jonas (Compliance) hold vetoes on CRM sync and the DPA respectively."
+      ],
+      [
+       "Need",
+       "Forecast accuracy: manual CRM updates make forecasts \"fiction by Thursday\". Adoption evidence is strong (90% WAU, edits down to 9%)."
+      ],
+      [
+       "Timeline",
+       "Annual pricing expires end of month. DPA redline Wed → 1-week legal review → signature window is tight but real."
+      ]
+     ]
+    },
+    "actionsOnly": {
+     "label": "Action items only",
+     "blocks": [
+      [
+       "Actions",
+       "See the extracted action item list — 6 owners across both companies."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Enable code-switched speech beta for Brightloop and Northwind workspaces",
+     "owner": "u-tom",
+     "due": "Friday",
+     "done": false,
+     "at": 620
+    },
+    {
+     "id": "a2",
+     "text": "Send security review doc + Teams-room voice enrollment guide",
+     "owner": "u-tom",
+     "due": "This week",
+     "done": false,
+     "at": 1610
+    },
+    {
+     "id": "a3",
+     "text": "Send redlined DPA with current sub-processor list",
+     "owner": "u-sahil",
+     "due": "Wednesday",
+     "done": false,
+     "at": 1750
+    },
+    {
+     "id": "a4",
+     "text": "Send annual order form for 210 seats at pilot pricing",
+     "owner": "u-sahil",
+     "due": "Today",
+     "done": true,
+     "at": 2280
+    },
+    {
+     "id": "a5",
+     "text": "Configure account-grouped weekly digests for regional managers",
+     "owner": "u-lena",
+     "due": "This week",
+     "done": false,
+     "at": 980
+    },
+    {
+     "id": "a6",
+     "text": "Schedule CRM field-mapping workshop with RevOps",
+     "owner": "u-tom",
+     "due": "Early next week",
+     "done": false,
+     "at": 2350
+    }
+   ],
+   "highlights": [
+    {
+     "id": "h1",
+     "at": 300,
+     "label": "Adoption stats: 90% WAU, edits down to 9%",
+     "by": "u-sahil"
+    },
+    {
+     "id": "h2",
+     "at": 1500,
+     "label": "Dan: \"no silent writes into Salesforce, ever\"",
+     "by": "u-sahil"
+    },
+    {
+     "id": "h3",
+     "at": 2150,
+     "label": "Pricing: $72k annual vs $96k list",
+     "by": "u-sahil"
+    }
+   ],
+   "topics": [
+    {
+     "name": "Pricing",
+     "hits": [
+      2100,
+      2150,
+      2210
+     ]
+    },
+    {
+     "name": "Compliance / DPA",
+     "hits": [
+      1680,
+      1740
+     ]
+    },
+    {
+     "name": "Competitor mentions",
+     "hits": []
+    }
+   ],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-sahil",
+     "start": 4,
+     "end": 15,
+     "text": "Alright, I think we have everyone. Mira, Daniel, thanks for pulling the whole team in for this one."
+    },
+    {
+     "id": "s1",
+     "speaker": "u-mira",
+     "start": 68,
+     "end": 78,
+     "text": "Happy to. We have our ops leads on as well since rollout touches their regions directly."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-sahil",
+     "start": 133,
+     "end": 149,
+     "text": "Perfect. Agenda is three parts: adoption numbers from the pilot, the two blockers your team flagged, and then commercial terms for the annual renewal. Anything to add?"
+    },
+    {
+     "id": "s3",
+     "speaker": "u-dan",
+     "start": 201,
+     "end": 216,
+     "text": "One thing. I want ten minutes on the CRM sync before we talk terms. If field mapping stays manual, the rest is moot for us."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-sahil",
+     "start": 261,
+     "end": 271,
+     "text": "Noted, we will do that right after adoption. Lena, do you want to run the numbers?"
+    },
+    {
+     "id": "s5",
+     "speaker": "u-lena",
+     "start": 300,
+     "end": 335,
+     "text": "Sure. Pilot ran six weeks across forty-two seats. Weekly active recorders ended at thirty-eight, so ninety percent. Median meetings captured per user per week was eleven. The number I care about most: summary edits before sharing dropped from roughly forty percent of calls in week one to nine percent by week six, which means the drafts are landing as-is."
+    },
+    {
+     "id": "s6",
+     "speaker": "u-mira",
+     "start": 359,
+     "end": 367,
+     "text": "That matches what I hear anecdotally. The complaint volume just stopped after week two."
+    },
+    {
+     "id": "s7",
+     "speaker": "u-lena",
+     "start": 399,
+     "end": 415,
+     "text": "The one soft spot is the Lisbon team. Their adoption plateaued around sixty percent, and interviews say it is the Portuguese transcript quality on mixed-language calls."
+    },
+    {
+     "id": "s8",
+     "speaker": "u-priya",
+     "start": 450,
+     "end": 463,
+     "text": "We see the same on our side with Hindi-English calls. Is there a roadmap answer, or do we design around it?"
+    },
+    {
+     "id": "s9",
+     "speaker": "u-tom",
+     "start": 529,
+     "end": 551,
+     "text": "There is a model upgrade for code-switched speech in beta now. I can enable it for both your workspaces this week. In internal tests it cut word error rate on mixed calls by about a third."
+    },
+    {
+     "id": "s10",
+     "speaker": "u-priya",
+     "start": 604,
+     "end": 609,
+     "text": "That would be worth a lot. Please do."
+    },
+    {
+     "id": "s11",
+     "speaker": "u-sahil",
+     "start": 661,
+     "end": 674,
+     "text": "Action for Tom then: beta flag for Brightloop and Northwind by Friday. Okay, Daniel, CRM sync. Walk us through the pain."
+    },
+    {
+     "id": "s12",
+     "speaker": "u-dan",
+     "start": 712,
+     "end": 742,
+     "text": "Today every call summary lands in the deal timeline as a note, which is fine. But stage, next step, and close date still get typed by hand. Reps do it late or never, and my forecast is fiction by Thursday. I want field-level sync: Fathom proposes, rep confirms, CRM updates."
+    },
+    {
+     "id": "s13",
+     "speaker": "u-tom",
+     "start": 775,
+     "end": 798,
+     "text": "That exists on the Business tier. Field mapping is per-team; suggestions appear after each call and a one-click confirm writes through. We support close date, stage, amount, next step and any custom field with a text or date type."
+    },
+    {
+     "id": "s14",
+     "speaker": "u-priya",
+     "start": 825,
+     "end": 845,
+     "text": "Quick regional color from Northwind pilot group. Recording consent banners worked fine, but managers want the weekly digest grouped by account rather than by rep. Right now they stitch it manually every Monday."
+    },
+    {
+     "id": "s15",
+     "speaker": "u-lena",
+     "start": 907,
+     "end": 921,
+     "text": "That is a saved-view change, not a feature request. I can configure account-grouped digests for your managers this week and it applies retroactively."
+    },
+    {
+     "id": "s16",
+     "speaker": "u-priya",
+     "start": 980,
+     "end": 983,
+     "text": "Okay, that works for me."
+    },
+    {
+     "id": "s17",
+     "speaker": "u-raj",
+     "start": 1042,
+     "end": 1062,
+     "text": "Quick regional color from Velocity logistics pod. Recording consent banners worked fine, but managers want the weekly digest grouped by account rather than by rep. Right now they stitch it manually every Monday."
+    },
+    {
+     "id": "s18",
+     "speaker": "u-lena",
+     "start": 1104,
+     "end": 1118,
+     "text": "That is a saved-view change, not a feature request. I can configure account-grouped digests for your managers this week and it applies retroactively."
+    },
+    {
+     "id": "s19",
+     "speaker": "u-raj",
+     "start": 1152,
+     "end": 1155,
+     "text": "Okay, that works for me."
+    },
+    {
+     "id": "s20",
+     "speaker": "u-emma",
+     "start": 1214,
+     "end": 1234,
+     "text": "Quick regional color from the EMEA sales floor. Recording consent banners worked fine, but managers want the weekly digest grouped by account rather than by rep. Right now they stitch it manually every Monday."
+    },
+    {
+     "id": "s21",
+     "speaker": "u-lena",
+     "start": 1258,
+     "end": 1272,
+     "text": "That is a saved-view change, not a feature request. I can configure account-grouped digests for your managers this week and it applies retroactively."
+    },
+    {
+     "id": "s22",
+     "speaker": "u-emma",
+     "start": 1328,
+     "end": 1330,
+     "text": "Yep, fair enough."
+    },
+    {
+     "id": "s23",
+     "speaker": "u-dan",
+     "start": 1394,
+     "end": 1405,
+     "text": "Confirm flow is important. I do not want silent writes into Salesforce, ever. Who audits what got written?"
+    },
+    {
+     "id": "s24",
+     "speaker": "u-tom",
+     "start": 1462,
+     "end": 1479,
+     "text": "Every write is attributed and reversible from the audit log, and you can scope which fields are even suggestible. I will send the security review doc after this."
+    },
+    {
+     "id": "s25",
+     "speaker": "u-jonas",
+     "start": 1506,
+     "end": 1522,
+     "text": "On that thread, we still need the data-processing addendum updated before anything writes into a system that holds patient adjacent data. Legal flagged the sub-processor list."
+    },
+    {
+     "id": "s26",
+     "speaker": "u-sahil",
+     "start": 1559,
+     "end": 1578,
+     "text": "Understood. I will get our counsel to send the updated DPA with the current sub-processor list this week. Jonas, if we get you that by Wednesday, what is your review turnaround?"
+    },
+    {
+     "id": "s27",
+     "speaker": "u-jonas",
+     "start": 1629,
+     "end": 1639,
+     "text": "If it is a redline of the existing one, a week. A fresh document, three weeks, honestly."
+    },
+    {
+     "id": "s28",
+     "speaker": "u-sahil",
+     "start": 1663,
+     "end": 1678,
+     "text": "It will be a redline. Okay, adoption looks strong, blockers have owners. Commercials. You are at forty-two pilot seats. Where does the full rollout land?"
+    },
+    {
+     "id": "s29",
+     "speaker": "u-jonas",
+     "start": 1712,
+     "end": 1726,
+     "text": "Before we move on, a few security questions I owe our review board. Where is call audio stored at rest, and for how long?"
+    },
+    {
+     "id": "s30",
+     "speaker": "u-tom",
+     "start": 1770,
+     "end": 1791,
+     "text": "Audio and transcripts live encrypted at rest in your regional storage zone, EU for you. Default retention is two years, and on Business you can set per-team policies down to thirty days, with legal-hold exceptions."
+    },
+    {
+     "id": "s31",
+     "speaker": "u-jonas",
+     "start": 1847,
+     "end": 1852,
+     "text": "Who inside your company can access our recordings?"
+    },
+    {
+     "id": "s32",
+     "speaker": "u-tom",
+     "start": 1886,
+     "end": 1903,
+     "text": "Nobody by default. Support access requires an explicit grant from your admin, is time-boxed to seventy-two hours, and every access lands in the audit export you already pull weekly."
+    },
+    {
+     "id": "s33",
+     "speaker": "u-priya",
+     "start": 1948,
+     "end": 1959,
+     "text": "What is the story on model training? Our counsel will ask whether your vendors train on our calls."
+    },
+    {
+     "id": "s34",
+     "speaker": "u-tom",
+     "start": 1981,
+     "end": 1997,
+     "text": "Customer content is excluded from training by contract, and that flows down to our model sub-processors. It is in the DPA Sahil is sending, section four."
+    },
+    {
+     "id": "s35",
+     "speaker": "u-dan",
+     "start": 2044,
+     "end": 2054,
+     "text": "What happens to a call when the rep leaves the company? Ownership of the record, I mean."
+    },
+    {
+     "id": "s36",
+     "speaker": "u-tom",
+     "start": 2100,
+     "end": 2113,
+     "text": "Workspace owns the recording, not the individual. Offboarding reassigns their library to a manager or an archive team, links keep working."
+    },
+    {
+     "id": "s37",
+     "speaker": "u-raj",
+     "start": 2164,
+     "end": 2172,
+     "text": "And exports? If we ever leave, I want everything out, not a hostage situation."
+    },
+    {
+     "id": "s38",
+     "speaker": "u-tom",
+     "start": 2225,
+     "end": 2233,
+     "text": "Full export: media, transcripts, summaries and metadata in open formats, self-serve, no ticket needed."
+    },
+    {
+     "id": "s39",
+     "speaker": "u-mira",
+     "start": 2293,
+     "end": 2300,
+     "text": "Good answers all around. Jonas, does that cover your board list?"
+    },
+    {
+     "id": "s40",
+     "speaker": "u-jonas",
+     "start": 2358,
+     "end": 2368,
+     "text": "Most of it. I will send the remaining four questions in writing with the DPA redline."
+    },
+    {
+     "id": "s41",
+     "speaker": "u-mira",
+     "start": 2400,
+     "end": 2409,
+     "text": "Let us sketch the rollout waves while everyone is here. Wave one is who exactly?"
+    },
+    {
+     "id": "s42",
+     "speaker": "u-dan",
+     "start": 2468,
+     "end": 2480,
+     "text": "Sales and CS in North America, about eighty seats. They are the loudest ask and the CRM sync pilot group."
+    },
+    {
+     "id": "s43",
+     "speaker": "u-priya",
+     "start": 2521,
+     "end": 2530,
+     "text": "Northwind side, wave one is the account management pod, twenty-five seats, once the DPA clears."
+    },
+    {
+     "id": "s44",
+     "speaker": "u-lena",
+     "start": 2592,
+     "end": 2608,
+     "text": "For each wave I run the same playbook: kickoff session, week-one office hours, and an adoption report at day fourteen. Managers get the digest from day one."
+    },
+    {
+     "id": "s45",
+     "speaker": "u-raj",
+     "start": 2636,
+     "end": 2644,
+     "text": "Logistics pod goes wave two for us, the Teams-room enrollment needs to happen first."
+    },
+    {
+     "id": "s46",
+     "speaker": "u-emma",
+     "start": 2703,
+     "end": 2718,
+     "text": "EMEA sales floor is wave two as well, we want the Lisbon transcript fix proven before I put it in front of the whole floor."
+    },
+    {
+     "id": "s47",
+     "speaker": "u-sahil",
+     "start": 2753,
+     "end": 2768,
+     "text": "So wave one is roughly one hundred five seats within three weeks of signature, remainder next quarter. That matches the phasing in the order form."
+    },
+    {
+     "id": "s48",
+     "speaker": "u-mira",
+     "start": 2791,
+     "end": 2797,
+     "text": "Correct. Put those wave definitions in writing with the form."
+    },
+    {
+     "id": "s49",
+     "speaker": "u-sahil",
+     "start": 2841,
+     "end": 2855,
+     "text": "While we have the leads on, let me do the five-minute walkthrough of what managers actually see, because that decides whether this sticks."
+    },
+    {
+     "id": "s50",
+     "speaker": "u-sahil",
+     "start": 2878,
+     "end": 2900,
+     "text": "This is the team library. Every call your team recorded, newest first, with the summary state and who has already viewed it. Nobody asks \"what happened on the Acme call\" in Slack anymore, they open the recap."
+    },
+    {
+     "id": "s51",
+     "speaker": "u-emma",
+     "start": 2929,
+     "end": 2937,
+     "text": "Can I filter that to only external calls? Internal standups are noise for me."
+    },
+    {
+     "id": "s52",
+     "speaker": "u-sahil",
+     "start": 3000,
+     "end": 3025,
+     "text": "Top-left filter, external only, and you can save that as your default view. Next: this is a single call page. Summary on the right, transcript synced to playback on the left, and every action item links to the second it was said."
+    },
+    {
+     "id": "s53",
+     "speaker": "u-priya",
+     "start": 3058,
+     "end": 3066,
+     "text": "The jump-to-moment thing is what won our pilot group over, for the record."
+    },
+    {
+     "id": "s54",
+     "speaker": "u-sahil",
+     "start": 3102,
+     "end": 3116,
+     "text": "Same for keyword alerts. Daniel, your pricing-mention alert would live here, it scans every new team call and pings you with the exact clip."
+    },
+    {
+     "id": "s55",
+     "speaker": "u-dan",
+     "start": 3165,
+     "end": 3175,
+     "text": "As long as I can scope it to my pipeline reviews and not all-hands chatter, yes."
+    },
+    {
+     "id": "s56",
+     "speaker": "u-sahil",
+     "start": 3229,
+     "end": 3255,
+     "text": "Scoped by folder, by team, or by attendee. Last piece, Ask Fathom across the whole library: type \"what did Brightloop commit to in the last month\" and it answers with citations into the calls. That is the piece that replaces the Monday archaeology."
+    },
+    {
+     "id": "s57",
+     "speaker": "u-mira",
+     "start": 3303,
+     "end": 3311,
+     "text": "Show that to procurement, honestly. It is the best argument for the annual."
+    },
+    {
+     "id": "s58",
+     "speaker": "u-mira",
+     "start": 3369,
+     "end": 3382,
+     "text": "Two hundred and ten seats across four regions, phased over two quarters. But I want pilot pricing held for the first hundred."
+    },
+    {
+     "id": "s59",
+     "speaker": "u-sahil",
+     "start": 3431,
+     "end": 3453,
+     "text": "If we sign annual before the end of the month, I can hold pilot pricing on the full two hundred and ten, not just the first hundred. It needs the annual commitment though, monthly resets to list."
+    },
+    {
+     "id": "s60",
+     "speaker": "u-dan",
+     "start": 3502,
+     "end": 3506,
+     "text": "What does that put the total at?"
+    },
+    {
+     "id": "s61",
+     "speaker": "u-sahil",
+     "start": 3532,
+     "end": 3546,
+     "text": "At pilot rate, annual, roughly seventy-two thousand for the year, billed once. List monthly would be just over ninety-six across the same period."
+    },
+    {
+     "id": "s62",
+     "speaker": "u-mira",
+     "start": 3580,
+     "end": 3592,
+     "text": "Send the order form. I cannot promise month-end, procurement moves how it moves, but the delta is a strong argument."
+    },
+    {
+     "id": "s63",
+     "speaker": "u-raj",
+     "start": 3618,
+     "end": 3631,
+     "text": "One more from me. Half our leadership calls happen in Teams rooms with a shared account. Does capture attribute speakers correctly there?"
+    },
+    {
+     "id": "s64",
+     "speaker": "u-tom",
+     "start": 3693,
+     "end": 3710,
+     "text": "Room systems are the hardest case. Diarization separates voices, but names need a one-time voice enrollment per person. Takes about a minute each. I will include the setup guide."
+    },
+    {
+     "id": "s65",
+     "speaker": "u-raj",
+     "start": 3775,
+     "end": 3781,
+     "text": "Fine as long as it is once, not per call."
+    },
+    {
+     "id": "s66",
+     "speaker": "u-sahil",
+     "start": 3814,
+     "end": 3823,
+     "text": "Once per person. Alright, let me read back the actions before we lose the room."
+    },
+    {
+     "id": "s67",
+     "speaker": "u-sahil",
+     "start": 3881,
+     "end": 3911,
+     "text": "Tom enables the code-switched speech beta for both workspaces by Friday and sends the security review plus the room enrollment guide. I send the redlined DPA by Wednesday and the annual order form today. Jonas reviews within a week of receipt. Mira starts procurement in parallel. Did I miss anything?"
+    },
+    {
+     "id": "s68",
+     "speaker": "u-dan",
+     "start": 3943,
+     "end": 3952,
+     "text": "Field mapping workshop. I want RevOps and Tom in a room before rollout wave one."
+    },
+    {
+     "id": "s69",
+     "speaker": "u-tom",
+     "start": 3993,
+     "end": 3998,
+     "text": "I will send times for early next week."
+    },
+    {
+     "id": "s70",
+     "speaker": "u-mira",
+     "start": 4023,
+     "end": 4027,
+     "text": "Good meeting. Send the form, Sahil."
+    },
+    {
+     "id": "s71",
+     "speaker": "u-sahil",
+     "start": 4050,
+     "end": 4055,
+     "text": "On its way within the hour. Thanks everyone."
+    }
+   ],
+   "shareToken": "pub-qbr-brightloop"
+  },
+  {
+   "id": "m-velocity-demo",
+   "title": "Velocity Cargo — product demo",
+   "kind": "External · Demo",
+   "platform": "meet",
+   "start": "2026-09-27T10:30:00.000Z",
+   "durationSec": 1173,
+   "attendees": [
+    "u-sahil",
+    "u-raj",
+    "u-emma"
+   ],
+   "host": "u-sahil",
+   "external": true,
+   "account": "Velocity Cargo",
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Context",
+       "Velocity's pain is volume: ~20 short dispatch calls/day per coordinator plus carrier negotiations, with notes written late or never."
+      ],
+      [
+       "Demo",
+       "Showed instant summaries on a 4-minute call, bot-free capture (nothing visibly joins the call), calendar/audio auto-start for back-to-back calls, and competitor keyword alerts with jump links, delivered as digest or in Slack."
+      ],
+      [
+       "Objections",
+       "Raj worried about a visible bot spooking carriers (answered by bot-free local capture) and Emma about zero-click capture between calls (answered by auto-start)."
+      ],
+      [
+       "Next step",
+       "Pilot proposal: one dispatch pod + top sales pod, 3 weeks, success criteria agreed upfront. Raj: \"If the pilot holds up like this demo, we will talk about the whole floor.\""
+      ]
+     ]
+    },
+    "bant": {
+     "label": "Sales · BANT",
+     "blocks": [
+      [
+       "Budget",
+       "Not discussed — pilot first. Rollout sizing mentioned at ~40 people."
+      ],
+      [
+       "Authority",
+       "Raj (COO) decides; Emma (Sales Director) is the day-to-day champion for the sales-floor use case."
+      ],
+      [
+       "Need",
+       "High: undocumented dispatch calls and competitor-mention chasing are daily, quantified pain."
+      ],
+      [
+       "Timeline",
+       "Pilot can start within a week — the long pole is their SSO admin."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Send 3-week pilot proposal with success criteria (dispatch pod + sales pod)",
+     "owner": "u-sahil",
+     "due": "Tomorrow",
+     "done": true,
+     "at": 700
+    },
+    {
+     "id": "a2",
+     "text": "Include competitor keyword alert setup in the pilot config",
+     "owner": "u-sahil",
+     "due": "With proposal",
+     "done": false,
+     "at": 560
+    }
+   ],
+   "highlights": [
+    {
+     "id": "h1",
+     "at": 540,
+     "label": "Emma: competitor mentions is what I chase all day",
+     "by": "u-sahil"
+    }
+   ],
+   "topics": [
+    {
+     "name": "Competitor mentions",
+     "hits": [
+      520,
+      560
+     ]
+    },
+    {
+     "name": "Pricing",
+     "hits": []
+    }
+   ],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-sahil",
+     "start": 4,
+     "end": 8,
+     "text": "Hey Raj, can you hear me alright?"
+    },
+    {
+     "id": "s1",
+     "speaker": "u-raj",
+     "start": 63,
+     "end": 70,
+     "text": "Loud and clear. Give me one second, just closing a tab avalanche."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-sahil",
+     "start": 137,
+     "end": 142,
+     "text": "No rush. How was the rest of your week?"
+    },
+    {
+     "id": "s3",
+     "speaker": "u-raj",
+     "start": 238,
+     "end": 246,
+     "text": "Busy but good. We wrapped the quarter review yesterday, so today feels lighter already."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-sahil",
+     "start": 305,
+     "end": 319,
+     "text": "So the goal today is a working demo against your real workflow. You said dispatch calls are the noisiest part of the day?"
+    },
+    {
+     "id": "s5",
+     "speaker": "u-raj",
+     "start": 375,
+     "end": 388,
+     "text": "Dispatch and carrier negotiations. Twenty short calls a day per coordinator, and nothing gets written down until evening, if at all."
+    },
+    {
+     "id": "s6",
+     "speaker": "u-sahil",
+     "start": 443,
+     "end": 468,
+     "text": "Then let me show capture on a short call first, because that is your shape of meeting. This is a recording from this morning, four minutes long. Notice the summary is ready the moment the call ends, action items already extracted."
+    },
+    {
+     "id": "s7",
+     "speaker": "u-raj",
+     "start": 540,
+     "end": 550,
+     "text": "And this works without the bot joining? Some carriers get twitchy when a third participant appears."
+    },
+    {
+     "id": "s8",
+     "speaker": "u-sahil",
+     "start": 609,
+     "end": 624,
+     "text": "Yes, bot-free capture runs locally on the coordinator machine. The other side sees nothing joining the call. Consent notice is configurable to your legal requirements."
+    },
+    {
+     "id": "s9",
+     "speaker": "u-emma",
+     "start": 657,
+     "end": 667,
+     "text": "What happens with back-to-back calls? Our coordinators do not have thirty seconds between them to click anything."
+    },
+    {
+     "id": "s10",
+     "speaker": "u-sahil",
+     "start": 747,
+     "end": 771,
+     "text": "Capture auto-starts from the calendar, or from call audio detection for ad-hoc calls. Zero clicks is the design goal. Emma, for your sales floor there is also keyword alerting, want me to show pricing mentions across a week of calls?"
+    },
+    {
+     "id": "s11",
+     "speaker": "u-emma",
+     "start": 831,
+     "end": 838,
+     "text": "Show me competitor mentions instead. That is what I chase all day."
+    },
+    {
+     "id": "s12",
+     "speaker": "u-sahil",
+     "start": 923,
+     "end": 945,
+     "text": "Even better. Here is a saved alert for two competitor names. Every mention across the team, with a jump link into the exact moment of the recording. You get this as a digest or in Slack."
+    },
+    {
+     "id": "s13",
+     "speaker": "u-emma",
+     "start": 988,
+     "end": 996,
+     "text": "Okay, that is genuinely useful. What does rollout look like for forty people?"
+    },
+    {
+     "id": "s14",
+     "speaker": "u-sahil",
+     "start": 1072,
+     "end": 1091,
+     "text": "A week, most of it waiting on your SSO admin. I will send a pilot proposal for one dispatch pod and your top sales pod, three weeks, success criteria we agree upfront."
+    },
+    {
+     "id": "s15",
+     "speaker": "u-raj",
+     "start": 1157,
+     "end": 1167,
+     "text": "Send it. If the pilot holds up like this demo, we will talk about the whole floor."
+    }
+   ],
+   "shareToken": "pub-velocity-demo"
+  },
+  {
+   "id": "m-standup-0928",
+   "title": "Product & Eng standup",
+   "kind": "Internal · Standup",
+   "platform": "meet",
+   "start": "2026-09-28T09:00:00.000Z",
+   "durationSec": 299,
+   "attendees": [
+    "u-kenji",
+    "u-amara",
+    "u-sofia"
+   ],
+   "host": "u-kenji",
+   "external": false,
+   "account": null,
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Updates",
+       "Template picker is on staging (default-ordering question open in channel). Search and share-page empty states are done. Transcript seeking on long calls improved from ~4s to <200ms, PR up."
+      ],
+      [
+       "Blockers",
+       "Consent-banner copy review has been stuck 3 days — Kenji chases today."
+      ],
+      [
+       "Risk",
+       "Diarization vendor deprecates v2 endpoints at end of next month; ~1 week migration, now slotted for next sprint."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Chase consent banner copy review",
+     "owner": "u-kenji",
+     "due": "Today",
+     "done": true,
+     "at": 120
+    },
+    {
+     "id": "a2",
+     "text": "Slot diarization v2→v3 migration into next sprint",
+     "owner": "u-amara",
+     "due": "Sprint planning",
+     "done": false,
+     "at": 200
+    }
+   ],
+   "highlights": [],
+   "topics": [],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-kenji",
+     "start": 4,
+     "end": 8,
+     "text": "Morning all, quick round. Amara, go ahead."
+    },
+    {
+     "id": "s1",
+     "speaker": "u-amara",
+     "start": 53,
+     "end": 69,
+     "text": "Shipped the summary template picker to staging yesterday. One open question on default ordering, I posted options in the channel. Today is spec review for keyword alerts."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-sofia",
+     "start": 108,
+     "end": 122,
+     "text": "I finished the empty states for search and the share page. Blocked on copy review for the consent banner, it has been three days."
+    },
+    {
+     "id": "s3",
+     "speaker": "u-kenji",
+     "start": 159,
+     "end": 178,
+     "text": "I will chase copy today, that is on me. My update: transcript seeking performance is fixed, the long-call case went from four seconds to under two hundred milliseconds. PR is up."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-amara",
+     "start": 207,
+     "end": 212,
+     "text": "Oh nice, that was our worst support complaint."
+    },
+    {
+     "id": "s5",
+     "speaker": "u-kenji",
+     "start": 232,
+     "end": 254,
+     "text": "One risk to flag: the diarization vendor deprecates v2 endpoints at the end of next month. Migration is about a week of work and it is not scheduled yet. I want it in the next sprint."
+    },
+    {
+     "id": "s6",
+     "speaker": "u-amara",
+     "start": 287,
+     "end": 293,
+     "text": "Agreed, I will slot it. Anything else? Alright, thanks both."
+    }
+   ],
+   "shareToken": "pub-standup-0928"
+  },
+  {
+   "id": "m-cs-brightloop",
+   "title": "Brightloop week-3 check-in",
+   "kind": "External · Check-in",
+   "platform": "zoom",
+   "start": "2026-09-23T14:00:00.000Z",
+   "durationSec": 878,
+   "attendees": [
+    "u-lena",
+    "u-mira"
+   ],
+   "host": "u-lena",
+   "external": true,
+   "account": "Brightloop",
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Adoption",
+       "84% of pilot seats active in week 3, ahead of plan."
+      ],
+      [
+       "Feedback",
+       "Summary tone too formal for internal notes → casual template set as default for the ops pod; custom templates exist on Business tier."
+      ],
+      [
+       "Security",
+       "A public share link surprised their security team. Public sharing will be disabled workspace-wide today; admins can grant exceptions."
+      ],
+      [
+       "Renewal",
+       "Renewal conversation starts next month, Lena will bring usage evidence."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Set casual summary template as default for the ops pod",
+     "owner": "u-lena",
+     "due": "Today",
+     "done": true,
+     "at": 260
+    },
+    {
+     "id": "a2",
+     "text": "Disable public share links workspace-wide for Brightloop",
+     "owner": "u-lena",
+     "due": "Today",
+     "done": true,
+     "at": 420
+    }
+   ],
+   "highlights": [
+    {
+     "id": "h1",
+     "at": 400,
+     "label": "Public link sharing must be off by default",
+     "by": "u-lena"
+    }
+   ],
+   "topics": [
+    {
+     "name": "Renewal",
+     "hits": [
+      480
+     ]
+    }
+   ],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-lena",
+     "start": 4,
+     "end": 8,
+     "text": "Hey Mira, can you hear me alright?"
+    },
+    {
+     "id": "s1",
+     "speaker": "u-mira",
+     "start": 59,
+     "end": 66,
+     "text": "Loud and clear. Give me one second, just closing a tab avalanche."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-lena",
+     "start": 161,
+     "end": 166,
+     "text": "No rush. How was the rest of your week?"
+    },
+    {
+     "id": "s3",
+     "speaker": "u-mira",
+     "start": 251,
+     "end": 259,
+     "text": "Busy but good. We wrapped the quarter review yesterday, so today feels lighter already."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-lena",
+     "start": 329,
+     "end": 344,
+     "text": "This is our week-three check-in. Headline from my side: adoption is at eighty-four percent of pilot seats, which is ahead of the plan we set."
+    },
+    {
+     "id": "s5",
+     "speaker": "u-mira",
+     "start": 382,
+     "end": 399,
+     "text": "The team likes it. The pushback I keep hearing is people wanting the summary in their own words, some of the phrasing feels too formal for internal notes."
+    },
+    {
+     "id": "s6",
+     "speaker": "u-lena",
+     "start": 492,
+     "end": 512,
+     "text": "Two answers there. Short term, switch those users to the casual template, I can set it as their default. Longer term, custom templates land on the Business tier where you write the format yourself."
+    },
+    {
+     "id": "s7",
+     "speaker": "u-mira",
+     "start": 581,
+     "end": 599,
+     "text": "Set the casual default for the ops pod, please. Second thing: someone shared a call link externally and it worked. That surprised our security person. Walk me through link controls?"
+    },
+    {
+     "id": "s8",
+     "speaker": "u-lena",
+     "start": 669,
+     "end": 685,
+     "text": "By default share links are workspace-only. That link worked because the owner explicitly set it to public. I can lock public sharing off workspace-wide, want that?"
+    },
+    {
+     "id": "s9",
+     "speaker": "u-mira",
+     "start": 725,
+     "end": 730,
+     "text": "Yes, off by default, admins can grant exceptions."
+    },
+    {
+     "id": "s10",
+     "speaker": "u-lena",
+     "start": 768,
+     "end": 784,
+     "text": "Done today. Last thing from me: your renewal conversation starts next month. I will bring usage data so it is an evidence conversation, not a vibes one."
+    },
+    {
+     "id": "s11",
+     "speaker": "u-mira",
+     "start": 869,
+     "end": 872,
+     "text": "Appreciated. Same time next week."
+    }
+   ],
+   "shareToken": "pub-cs-brightloop"
+  },
+  {
+   "id": "m-roadmap-sep",
+   "title": "Monthly roadmap review",
+   "kind": "Internal · Review",
+   "platform": "teams",
+   "start": "2026-09-21T16:00:00.000Z",
+   "durationSec": 754,
+   "attendees": [
+    "u-amara",
+    "u-kenji",
+    "u-sofia"
+   ],
+   "host": "u-amara",
+   "external": false,
+   "account": null,
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Search",
+       "Hybrid retrieval shipped: first-result CTR 51%→68%, zero-result queries halved. Collapsed per-meeting result card goes behind a flag for 2 weeks."
+      ],
+      [
+       "Mobile recap",
+       "40% of summary reads happen on phones within an hour. One-screen recap (decisions, actions, 60s audio digest) goes to user testing Thursday; digest adds ~9s processing."
+      ],
+      [
+       "Ask Fathom",
+       "Wrong-segment citations past minute 40 traced to chunk overlap; fix raises citation accuracy 81%→94%, ships this week."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Ship collapsed search card behind a feature flag",
+     "owner": "u-kenji",
+     "due": "This week",
+     "done": false,
+     "at": 180
+    },
+    {
+     "id": "a2",
+     "text": "Run mobile recap user tests",
+     "owner": "u-sofia",
+     "due": "Thursday",
+     "done": false,
+     "at": 300
+    },
+    {
+     "id": "a3",
+     "text": "Ship citation accuracy fix",
+     "owner": "u-kenji",
+     "due": "This week",
+     "done": true,
+     "at": 430
+    }
+   ],
+   "highlights": [],
+   "topics": [],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-amara",
+     "start": 4,
+     "end": 17,
+     "text": "This is the monthly roadmap review. Three items: search relevance, the mobile recap experience, and Ask Fathom accuracy on long calls."
+    },
+    {
+     "id": "s1",
+     "speaker": "u-kenji",
+     "start": 94,
+     "end": 108,
+     "text": "Search first. We moved to hybrid retrieval two weeks ago. Click-through on first result went from fifty-one to sixty-eight percent. Zero-result queries halved."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-sofia",
+     "start": 210,
+     "end": 224,
+     "text": "Related design note: people do not scroll past three results, so I am proposing we collapse per-meeting hits into one card with moment previews."
+    },
+    {
+     "id": "s3",
+     "speaker": "u-amara",
+     "start": 315,
+     "end": 334,
+     "text": "Ship the collapsed card behind a flag, measure for two weeks. Mobile recap next. The data says forty percent of summary reads happen on phones within an hour of the call."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-sofia",
+     "start": 443,
+     "end": 455,
+     "text": "The new recap is one screen: decisions, actions, and a sixty-second audio digest. Prototype is in Figma, user tests Thursday."
+    },
+    {
+     "id": "s5",
+     "speaker": "u-kenji",
+     "start": 522,
+     "end": 537,
+     "text": "Engineering-wise the audio digest is the only heavy piece. We can synthesize it in the pipeline we already run, adds about nine seconds to processing."
+    },
+    {
+     "id": "s6",
+     "speaker": "u-amara",
+     "start": 587,
+     "end": 598,
+     "text": "Acceptable. Ask Fathom on long calls: the failure mode is answers citing the wrong segment past the forty-minute mark."
+    },
+    {
+     "id": "s7",
+     "speaker": "u-kenji",
+     "start": 675,
+     "end": 689,
+     "text": "Root cause is chunk overlap, not the model. Fix is in review, evaluation set shows citation accuracy going from eighty-one to ninety-four percent."
+    },
+    {
+     "id": "s8",
+     "speaker": "u-amara",
+     "start": 734,
+     "end": 748,
+     "text": "Good. Decisions today: collapsed search card behind a flag, mobile recap to user testing, citation fix ships this week. I will write it up."
+    }
+   ],
+   "shareToken": "pub-roadmap-sep"
+  },
+  {
+   "id": "m-1on1-tom",
+   "title": "Lena ↔ Tom biweekly 1:1",
+   "kind": "Internal · 1:1",
+   "platform": "meet",
+   "start": "2026-09-26T11:00:00.000Z",
+   "durationSec": 553,
+   "attendees": [
+    "u-lena",
+    "u-tom"
+   ],
+   "host": "u-lena",
+   "external": false,
+   "account": null,
+   "summaries": {
+    "chronological": {
+     "label": "Chronological",
+     "blocks": [
+      [
+       "Growth",
+       "Tom will write the internal compliance playbook (bus-factor risk on his knowledge); Friday afternoons blocked for two weeks, Lena covers his queue."
+      ],
+      [
+       "Workload",
+       "~5h/week of support escalations drifting to Tom; Lena raises with support leadership, target is ≤1h."
+      ],
+      [
+       "Feedback",
+       "Demo-to-pilot conversion best on team; playbook initiative noted as promotion-case material."
+      ]
+     ]
+    }
+   },
+   "actionItems": [
+    {
+     "id": "a1",
+     "text": "Block Friday afternoons ×2 for compliance playbook",
+     "owner": "u-tom",
+     "due": "This week",
+     "done": false,
+     "at": 90
+    },
+    {
+     "id": "a2",
+     "text": "Raise escalation-rotation drift with support leadership",
+     "owner": "u-lena",
+     "due": "This week",
+     "done": false,
+     "at": 180
+    }
+   ],
+   "highlights": [],
+   "topics": [],
+   "transcript": [
+    {
+     "id": "s0",
+     "speaker": "u-lena",
+     "start": 4,
+     "end": 9,
+     "text": "Hey, our biweekly. You go first this time."
+    },
+    {
+     "id": "s1",
+     "speaker": "u-tom",
+     "start": 70,
+     "end": 92,
+     "text": "Big one from me: the Northwind technical review went well but surfaced that I am the only SE who knows the compliance answers cold. If I am out, deals stall. I want to write an internal playbook."
+    },
+    {
+     "id": "s2",
+     "speaker": "u-lena",
+     "start": 179,
+     "end": 188,
+     "text": "Strongly yes. Take Friday afternoons for two weeks, I will cover your queue. What else?"
+    },
+    {
+     "id": "s3",
+     "speaker": "u-tom",
+     "start": 261,
+     "end": 274,
+     "text": "Smaller thing, I keep getting pulled into support escalations that are not really SE work. About five hours a week now."
+    },
+    {
+     "id": "s4",
+     "speaker": "u-lena",
+     "start": 315,
+     "end": 329,
+     "text": "That is drift from the old rotation. I will raise it with support leadership this week, you should be at one hour, not five."
+    },
+    {
+     "id": "s5",
+     "speaker": "u-tom",
+     "start": 372,
+     "end": 376,
+     "text": "Thanks. How am I doing overall, honestly?"
+    },
+    {
+     "id": "s6",
+     "speaker": "u-lena",
+     "start": 451,
+     "end": 474,
+     "text": "Genuinely well. Demo-to-pilot conversion on your deals is the best on the team. The playbook idea is exactly the kind of leverage I want to see, it is the sort of thing that shows up in promotion cases."
+    },
+    {
+     "id": "s7",
+     "speaker": "u-tom",
+     "start": 542,
+     "end": 547,
+     "text": "Good to hear. That is everything from me."
+    }
+   ],
+   "shareToken": "pub-1on1-tom"
+  }
+ ]
+}
