@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Bob } from "./Fx";
+import { SpaceFigure } from "./HeroArt";
 
 /* ---- hero floating UI cards ---------------------------------------------- */
 export function HeroCards() {
   return (
-    <div className="relative hidden h-[420px] lg:block" aria-hidden>
-      <div className="fx-pop animate-floaty absolute right-6 top-2 w-64 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "0s, .15s" }}>
+    <div className="pointer-events-none absolute inset-y-10 right-[max(1rem,calc((100vw-80rem)/2+2.5rem))] hidden w-[430px] lg:block" aria-hidden>
+      <div className="fx-pop animate-floaty absolute right-0 top-2 w-64 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "0s, .15s" }}>
         <div className="mb-2 flex items-center gap-2 text-[0.75rem] font-medium text-brand-cyan">✦ Ask Fanthom</div>
         <div className="rounded-xl bg-white/5 p-3 text-[0.72rem] text-offwhite/75">
           What did we commit to on the Brightloop call?
@@ -15,7 +17,7 @@ export function HeroCards() {
           You committed to sending the redlined DPA by Wednesday and the annual order form today.
         </div>
       </div>
-      <div className="fx-pop animate-floaty absolute left-4 top-40 w-60 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "1.4s, .4s" }}>
+      <div className="fx-pop animate-floaty absolute left-0 top-44 w-60 rounded-2xl border border-white/10 bg-offblack p-4 shadow-2xl" style={{ animationDelay: "1.4s, .4s" }}>
         <div className="mb-2 text-[0.75rem] font-medium text-offwhite">Project check-in</div>
         <div className="mb-2 flex -space-x-2">
           {["#00beff", "#ffa8bb", "#fff58c", "#9600ff"].map((c) => (
@@ -27,7 +29,10 @@ export function HeroCards() {
           <span className="rounded-full bg-white/10 px-2.5 py-1">Action items</span>
         </div>
       </div>
-      <div className="fx-pop animate-floaty absolute bottom-2 right-16 h-40 w-40" style={{ animationDelay: "0.7s, .65s" }}>
+      <Bob className="absolute bottom-16 left-40">
+        <SpaceFigure size={120} />
+      </Bob>
+      <div className="fx-pop animate-floaty absolute bottom-0 right-10 h-36 w-36" style={{ animationDelay: "0.7s, .65s" }}>
         <svg viewBox="0 0 100 100" className="h-full w-full">
           <defs>
             <radialGradient id="hero-p" cx="35%" cy="30%" r="80%">
@@ -196,8 +201,8 @@ export function RoleCarousel() {
   return (
     <div className="relative mt-14 overflow-hidden">
       <div className="container-x mb-5 flex justify-end gap-3">
-        <button aria-label="Back" onClick={() => setOff(Math.max(0, off - 1))} className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-pink text-black disabled:opacity-40" disabled={off === 0}>←</button>
-        <button aria-label="Forward" onClick={() => setOff(Math.min(roles.length - 2, off + 1))} className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-pink text-black disabled:opacity-40" disabled={off >= roles.length - 2}>→</button>
+        <button aria-label="Back" onClick={() => setOff(Math.max(0, off - 1))} className="arrow_fx flex h-10 w-10 items-center justify-center rounded-full bg-brand-pink text-black disabled:opacity-40" disabled={off === 0}>←</button>
+        <button aria-label="Forward" onClick={() => setOff(Math.min(roles.length - 2, off + 1))} className="arrow_fx flex h-10 w-10 items-center justify-center rounded-full bg-brand-pink text-black disabled:opacity-40" disabled={off >= roles.length - 2}>→</button>
       </div>
       <div className="flex gap-6 pl-[max(1rem,calc((100vw-80rem)/2+2.5rem))] transition-transform duration-500" style={{ transform: `translateX(calc(${-off} * (min(88vw, 30rem) + 1.5rem)))` }}>
         {roles.map(([title, kicker, body], idx) => (

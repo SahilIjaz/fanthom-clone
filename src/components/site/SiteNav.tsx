@@ -14,15 +14,15 @@ export function SiteNav() {
   const [open, setOpen] = useState(false);
   const [drop, setDrop] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-white/5 bg-black/80 backdrop-blur-md">
+    <header data-btn-swap="top" className="group/nav sticky top-0 z-50 border-b border-white/5 bg-black/80 backdrop-blur-md transition-colors duration-300 data-[btn-swap=scrolled]:bg-black/95">
       <div className="container-x flex h-[72px] items-center justify-between">
         <Link href="/" aria-label="Fanthom home">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-8 text-[0.95rem] font-normal text-offwhite/85 lg:flex">
-          <Link href="/" className="transition hover:text-white">Overview</Link>
+          <Link href="/" className="nav_link_fx">Overview</Link>
           <div className="relative" onMouseEnter={() => setDrop(true)} onMouseLeave={() => setDrop(false)}>
-            <button className="flex items-center gap-1 transition hover:text-white">
+            <button className="nav_link_fx flex items-center gap-1">
               Solutions <span className="text-[10px]">▾</span>
             </button>
             {drop && (
@@ -35,13 +35,13 @@ export function SiteNav() {
               </div>
             )}
           </div>
-          <Link href="/pricing" className="transition hover:text-white">Pricing</Link>
+          <Link href="/pricing" className="nav_link_fx">Pricing</Link>
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/app?demo=1" className="p-small px-3 py-2 text-offwhite/85 transition hover:text-white">
+          <Link href="/app?demo=1" className="nav_link_fx p-small px-3 py-2 text-offwhite/85">
             Book a Demo
           </Link>
-          <Link href="/login" className="p-small px-3 py-2 text-offwhite/85 transition hover:text-white">
+          <Link href="/login" className="nav_link_fx p-small px-3 py-2 text-offwhite/85">
             Log In
           </Link>
           <Link href="/login" className="btn btn-white !py-3 !text-[0.85rem]">Sign up free</Link>

@@ -28,7 +28,7 @@ export function SiteFooter() {
                 <ul className="space-y-2">
                   {links.map(([label, href]) => (
                     <li key={label}>
-                      <Link href={href} className="p-small text-offwhite/85 transition hover:text-white">
+                      <Link href={href} className="footer_link_fx p-small text-offwhite/85">
                         {label}
                       </Link>
                     </li>

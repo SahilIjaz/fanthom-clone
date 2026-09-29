@@ -1,8 +1,10 @@
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { MotionProvider } from "@/components/site/Motion";
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
+    <MotionProvider>
     <div className="flex min-h-screen flex-col bg-black">
       <a
         href="https://superhuman.com"
@@ -18,5 +20,6 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-1">{children}</main>
       <SiteFooter />
     </div>
+    </MotionProvider>
   );
 }

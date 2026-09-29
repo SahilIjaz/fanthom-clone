@@ -5,6 +5,10 @@ import { ProductShot } from "@/components/site/ProductShot";
 import { icons } from "@/components/site/IntegrationIcons";
 import { HeroCards, CaptureCarousel, TeamsTabs, RoleCarousel } from "@/components/site/HomeInteractive";
 import { Reveal, SplitHeading, Scramble, Parallax, ScaleIn, CountUp } from "@/components/site/Fx";
+import { Stars, GridHover, MarqueeBanner } from "@/components/site/Canvases";
+import { GradientParallax, Bob } from "@/components/site/Fx";
+import { SpaceFigure, MiniShip } from "@/components/site/HeroArt";
+import { BubbleField } from "@/components/site/Bubbles";
 
 const companies = ["HubSpot", "Adobe", "Zapier", "Grubhub", "Webflow", "Calendly", "Notion", "Ramp", "Vercel", "Loom"];
 
@@ -13,9 +17,10 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="container-x grid items-center gap-12 pb-20 pt-16 lg:grid-cols-[1.3fr_1fr] lg:pb-28 lg:pt-24">
-          <div>
-            <SplitHeading as="h1" text="AI notetaking that is out of this world" className="h1 !text-[clamp(3rem,4.7vw,4.3rem)] max-w-[16ch]" />
+        <Stars count={110} layers={2} />
+        <div className="container-x relative pb-20 pt-16 lg:pb-28 lg:pt-24">
+          <div className="relative z-10 max-w-[1100px]">
+            <SplitHeading as="h1" text="AI notetaking that is out of this world" className="h1 max-w-[15ch]" />
             <Reveal delay={420}><p className="p-regular mt-2 max-w-md text-offwhite/75">
               Fanthom summarizes your meetings so you can focus on the conversation.{" "}
               <span className="font-medium text-offwhite">Now available bot-free.</span>
@@ -52,18 +57,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CAPTURE CAROUSEL over black→cyan gradient */}
-      <section className="bg-[linear-gradient(180deg,#000_0%,#01293a_45%,#0d84b8_100%)] py-20">
-        <div className="container-x">
+      {/* CAPTURE CAROUSEL over parallaxing cyan gradient (inventory #5) */}
+      <section className="relative overflow-hidden py-20">
+        <GradientParallax className="absolute inset-x-0 -top-[45%] h-[190%] bg-[radial-gradient(ellipse_70%_55%_at_50%_60%,#0d84b8_0%,#01293a_55%,transparent_100%)]" />
+        <Stars count={70} layers={1} />
+        <div className="container-x relative">
           <CaptureCarousel />
         </div>
       </section>
+
+      {/* MARQUEE BANNER (inventory #10) */}
+      <MarqueeBanner className="border-y border-white/5 py-6" speed={80}>
+        {Array.from({ length: 3 }).map((_, i) => (
+          <span key={i} className="flex items-center gap-10 pr-10">
+            <span className="h2 whitespace-nowrap !text-[3.4rem] text-offwhite">Move work forward faster</span>
+            <MiniShip width={110} />
+          </span>
+        ))}
+      </MarqueeBanner>
 
       {/* TEAM OF 1 OR 1000 */}
       <section className="relative overflow-hidden py-24">
         <Parallax speed={0.18} className="absolute -left-52 top-40">
           <Planet size={430} className="opacity-90" />
         </Parallax>
+        <Stars count={80} layers={1} />
         <div className="container-x relative">
           <SplitHeading text="Whether you’re a team of 1 or 1,000, Fanthom’s got your back" className="h2 mx-auto max-w-[24ch] text-center" />
           <TeamsTabs />
@@ -87,10 +105,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="py-16">
-        <div className="container-x text-center">
-          <SplitHeading text="Fanthom teams work smarter" className="h2 mx-auto max-w-[12ch]" />
+      {/* STATS — offwhite grid-section with interactive hover grid (inventory #9) */}
+      <section className="relative bg-offwhite py-24 text-black">
+        <GridHover />
+        <div className="container-x relative text-center">
+          <SplitHeading text="Fanthom teams work smarter" className="h2 mx-auto max-w-[12ch] !text-black" />
           <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-3">
             {[
               ["95% of users", "say Fanthom helps them stay fully present in meetings"],
@@ -98,8 +117,8 @@ export default function Home() {
               ["3X faster", "from meeting insights to actionable next steps"],
             ].map(([n, d]) => (
               <Reveal key={n} delay={120}>
-                <CountUp value={n} className="disp text-4xl text-brand-cyan" />
-                <p className="p-small mt-2 text-offwhite/65">{d}</p>
+                <CountUp value={n} className="disp text-5xl text-black" />
+                <p className="p-small mt-2 text-black/65">{d}</p>
               </Reveal>
             ))}
           </div>
@@ -107,8 +126,9 @@ export default function Home() {
       </section>
 
       {/* MAKE YOUR TEAM UNSTOPPABLE */}
-      <section className="py-24">
-        <div className="container-x text-center">
+      <section className="relative overflow-hidden py-24">
+        <Stars count={90} layers={2} />
+        <div className="container-x relative text-center">
           <div className="kicker text-brand-cyan"><Scramble text="Shared understanding. Faster execution. Better results." /></div>
           <SplitHeading text="Make your team unstoppable" className="h2 mt-3" />
           <ScaleIn className="mt-12"><ProductShot /></ScaleIn>
@@ -121,7 +141,7 @@ export default function Home() {
         <div className="container-x text-center">
           <div className="kicker text-brand-yellow"><Scramble text="Zero friction, maximum flexibility." /></div>
           <SplitHeading text="Works where you meet" className="h2 mt-3" />
-          <div className="grid-bg relative mx-auto mt-14 h-[440px] max-w-4xl">
+          <BubbleField className="grid-bg relative mx-auto mt-14 h-[440px] max-w-4xl">
             <svg className="absolute inset-0 h-full w-full" viewBox="0 0 900 440" fill="none" aria-hidden>
               {[[218, 105], [672, 84], [148, 235], [700, 208], [258, 356], [648, 352]].map(([x, y], i) => (
                 <line key={i} x1="450" y1="220" x2={x} y2={y} stroke="rgba(255,255,255,0.55)" strokeWidth="1.4" />
@@ -139,11 +159,13 @@ export default function Home() {
               ["gmail", "Gmail", "left-[10%] bottom-[12%]"],
               ["asana", "Asana", "right-[8%] bottom-[13%]"],
             ].map(([icon, label, pos]) => (
-              <span key={label} className={`absolute ${pos} flex items-center gap-2 rounded-full bg-offwhite px-4 py-2 text-[0.85rem] font-medium text-black shadow-lg`}>
-                {icons[icon]} {label}
+              <span key={label} data-bubble className={`absolute ${pos}`}>
+                <span data-bubble-pill className="flex items-center gap-2 rounded-full bg-offwhite px-4 py-2 text-[0.85rem] font-medium text-black shadow-lg">
+                  {icons[icon]} {label}
+                </span>
               </span>
             ))}
-          </div>
+          </BubbleField>
           <Reveal><p className="p-large mx-auto mt-10 max-w-[28ch] text-offwhite/90">
             Fanthom adapts to your workflow, not the other way around.
           </p></Reveal>
@@ -161,11 +183,11 @@ export default function Home() {
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="arc-band py-28 text-center text-black">
+      <section className="arc-band py-28 text-center">
         <div className="container-x">
-          <div className="kicker font-medium"><Scramble text="Never miss what matters" /></div>
-          <SplitHeading text="Stop guessing. Ask Fanthom. Start today, for free." className="h2 mx-auto mt-3 max-w-[18ch]" />
-          <Link href="/login" className="btn btn-black mt-9">Get started. It&rsquo;s free.</Link>
+          <div className="kicker font-medium text-black"><Scramble text="Never miss what matters" /></div>
+          <SplitHeading text="Stop guessing. Ask Fanthom. Start today, for free." className="h2 mx-auto mt-3 max-w-[18ch] !text-offwhite" />
+          <Link href="/login" className="btn btn-black mt-9 !text-brand-yellow">Get started. It&rsquo;s free.</Link>
         </div>
       </section>
     </>
